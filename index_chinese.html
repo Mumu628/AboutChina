@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 1. 引入 Swiper 的 CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <div class="top">
+        <header>
+            <nav>
+                <a href="index_chinese.html">首页</a>
+                <a href="travel_chinese.html">旅游导览</a>
+                <a href="life_chinese.html">生活指南</a>
+                <a href="contact_chinese.html">联系我们</a>
+            </nav>
+            <div class="lang">
+                <a href="index_chinese.html" class="cn">CN</a>
+                <a href="index_english.html" class="en">EN</a>
+                <a href="index_french.html" class="fr">FR</a>
+            </div>
+        </header>
+        <h1>为您开启一段愉快的旅程</h1>
+        <p>POPULAR DESTINATIONS / LIVING TIPS</p>
+    </div>
+    <div class="travel">
+        <!-- Swiper 的主容器 -->
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <!-- 你的 5 张图片 -->
+                <div class="swiper-slide"><img src="images/image1.jpg" alt="图片1"></div>
+                <div class="swiper-slide"><img src="images/image2.jpg" alt="图片2"></div>
+                <div class="swiper-slide"><img src="images/image3.jpg" alt="图片3"></div>
+                <div class="swiper-slide"><img src="images/image4.jpg" alt="图片4"></div>
+                <div class="swiper-slide"><img src="images/image5.jpg" alt="图片5"></div>
+            </div>
+            <!-- 分页器 (小圆点) -->
+            <div class="swiper-pagination"></div>
+            <!-- 导航按钮 (左右箭头) -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+    const swiper = new Swiper('.swiper', {
+      // *** 核心配置 ***
+      slidesPerView: 3,   // 一次显示3个
+      spaceBetween: 10,   // 图片之间的距离
+      loop: true,         // 开启无限循环
+      
+      // (可选) 自动播放
+      autoplay: {
+        delay: 2800, // 2.8秒切换一次
+        disableOnInteraction: false, // 用户操作后是否停止自动播放
+      },
+
+      // (可选) 分页器
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+
+      // (可选) 导航按钮
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
+
+</html>
