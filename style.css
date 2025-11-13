@@ -7,7 +7,7 @@ body {
     margin: 0;
 }
 
-a {
+.top a {
     color: #FFFFFF;
     text-decoration: none;
 }
@@ -15,7 +15,6 @@ a {
 /*首图*/
 .top {
     height: 620px;
-    background-image: url(images/TheForbiddenCity.jpg);
     background-size: cover;
     text-align: center;
 }
@@ -49,19 +48,34 @@ nav * {
 }
 
 h1 {
+    font-size: 35px;
     padding-top: 84px;
 }
 
 /*介绍旅游导览*/
 .travel {
+    display: flex;
+    justify-content: space-between;
+    padding: 110px 10px 10px 30px;
     height: 620px;
+    background-image: url(images/travel.jpg);
+    background-size: cover;
 }
 
+.introduce {
+    margin: 8% 5% 0 0;
+}
 
+.introduce h2 {
+    font-family: "Noto Serif SC", serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: #FFED85;
+}
 
 .swiper {
-    width: 900px;
-    height: 500px;
+    width: 980px;
+    height: 450px;
 }
 
 .swiper-slide {
@@ -84,5 +98,105 @@ h1 {
 .swiper-pagination,
 .swiper-button-prev,
 .swiper-button-next {
-    --swiper-theme-color: #ffffff;
+    --swiper-theme-color: #ffffffc1;
+}
+
+/*介绍生活指南*/
+.life {
+    display: flex;
+    justify-content: space-between;
+    padding: 110px 10px 10px 30px;
+    height: 680px;
+    background-image: url(images/life.jpg);
+    background-size: cover;
+}
+
+
+
+
+
+/*旅游导览*/
+.content {
+    display: flex;
+    gap: 5%;
+    padding: 20px 0;
+    background-size: cover;
+    background-position: center bottom;
+}
+
+.choose {
+    width: 16%;
+}
+
+button {
+    font-size: 20px;
+    color: #FFFFFF;
+    background-color: #ffffff00;
+    padding: 6px 20px;
+    border: 0;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
+button:hover {
+    background: linear-gradient(to right, #ffffff32, #ffffff00);
+    transition: 500ms;
+}
+
+button:active {
+    background: linear-gradient(to right, #ffffff32, #ffffff00);
+}
+
+article {
+    padding: 0;
+    font-size: 18px;
+    width: 75%;
+}
+
+.province-intro h1, .living-intro h1{
+    padding-top: 0;
+    padding-bottom: 20px;
+}
+
+h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.province-intro,.living-intro {
+    /* 【关键】默认隐藏所有介绍 */
+    display: none;
+}
+
+/* 【关键】被选中的介绍内容块显示出来 */
+.province-intro.active, .living-intro.active{
+    display: block;
+    animation: fadeIn 0.5s;
+    /* 添加一个简单的淡入动画 */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+li{
+    padding-bottom: 20px;
+}
+
+article a{
+    color: #FFFFFF;
+}
+
+
+.contact_us{
+    display: flex;
+    justify-content: space-around;
 }
