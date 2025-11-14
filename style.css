@@ -142,7 +142,7 @@ button:hover {
     transition: 500ms;
 }
 
-button:active {
+button.active {
     background: linear-gradient(to right, #ffffff32, #ffffff00);
 }
 

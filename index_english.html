@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- 引入 Swiper 的 CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <!-- 引入思源宋体 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="top" style="background-image: url(images/TheForbiddenCity.jpg);">
+    <header>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="travel_english.html">Travel Guide</a>
+        <a href="life_english.html">Life Guide</a>
+        <a href="contact_english.html">Contact Us</a>
+      </nav>
+      <div class="lang">
+        <a href="index.html" class="cn">CN</a>
+        <a href="index_english.html" class="en">EN</a>
+        <a href="index_french.html" class="fr">FR</a>
+      </div>
+    </header>
+    <h1>CHINA HERITAGE & TRAVEL PORTAL</h1>
+  </div>
+  <div class="travel">
+    <div class="introduce">
+      <h2>Popular Attractions</h2>
+      <a href="travel_chinese.html" style="color: #FFED85;">For more information</a>
+    </div>
+    <!-- Swiper 的主容器 -->
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <!-- 你的 6 张图片 -->
+        <div class="swiper-slide"><img src="images/image1.jpg" alt="图片1"></div>
+        <div class="swiper-slide"><img src="images/image2.jpg" alt="图片2"></div>
+        <div class="swiper-slide"><img src="images/image3.jpg" alt="图片3"></div>
+        <div class="swiper-slide"><img src="images/image4.jpg" alt="图片4"></div>
+        <div class="swiper-slide"><img src="images/image5.jpg" alt="图片5"></div>
+        <div class="swiper-slide"><img src="images/image6.jpg" alt="图片5"></div>
+      </div>
+      <!-- 分页器 (小圆点) -->
+      <div class="swiper-pagination"></div>
+      <!-- 导航按钮 (左右箭头) -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+  <div class="life" style="display: flex;flex-direction: column;">
+    <div class="introduce">
+      <h2>Life Guide</h2>
+      <a href="life_chinese.html" style="color: #FFED85;">For more information</a>
+    </div>
+     <footer style="height: 7vh;">
+        <h4 style="display: inline;">Photo Credits</h4><span class="name">Shi Tianjie: Wenchang Palace, Hall of Prayer
+            for Good Harvests, Tengwang Pavilion, </span><span class="name">Yu Jinsong: Forbidden City, Scorpion
+            Mountain, </span><span class="name">Xu Guangyu: Shanghai Bund, </span><span class="name">Zhang Haoming:
+            Mawangdui, </span><span class="name">Yang Yuexin: Hongya Cave</span>
+    </footer>
+  </div>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      // *** 核心配置 ***
+      slidesPerView: 3,   // 一次显示3个
+      spaceBetween: 10,   // 图片之间的距离
+      loop: true,         // 开启无限循环
+
+      // (可选) 自动播放
+      autoplay: {
+        delay: 2800, // 2.8秒切换一次
+        disableOnInteraction: false, // 用户操作后是否停止自动播放
+      },
+
+      // (可选) 分页器
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+
+      // (可选) 导航按钮
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
+
+</html>
